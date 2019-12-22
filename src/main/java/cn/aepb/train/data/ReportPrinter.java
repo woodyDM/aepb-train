@@ -22,11 +22,11 @@ public class ReportPrinter {
 
     public String report(Report report) {
         StringBuilder sb = new StringBuilder();
-        report(report, 0, sb);
+        doReport(report, 0, sb);
         return sb.toString();
     }
 
-    private void report(Report report, int depth, StringBuilder sb) {
+    private void doReport(Report report, int depth, StringBuilder sb) {
         appendHeader(depth, sb);
         sb.append(convertOwner(report.getOwner()));
         appendReportData(report.getTotalData(), sb);
@@ -39,7 +39,7 @@ public class ReportPrinter {
         }
         if (report.getSlaveReport() != null) {
             report.getSlaveReport().forEach(slaveReport ->
-                    report(slaveReport, depth + 1, sb));
+                    doReport(slaveReport, depth + 1, sb));
         }
     }
 
