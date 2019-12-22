@@ -43,8 +43,6 @@
             <version>28.0-jre</version>
         </dependency>
 
-
-
     </dependencies>
 
     <build>
@@ -59,12 +57,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
-            </plugin>
+
 
         </plugins>
     </build>
